@@ -1,0 +1,139 @@
+<!--
+
+=========================================================
+* Vue Material Kit - v1.2.2
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/vue-material-kit
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/vue-material-kit/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.png">
+  <title>Kuveyt</title>
+
+  <!--  Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but vue-material-kit doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".HomebGSwiper", {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    breakpoints: {
+      1920: {
+        slidesPerView: 7
+      },
+      1028: {
+        slidesPerView: 6
+      },
+      480: {
+        slidesPerView: 3
+      }
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+  
+  /**
+   * Sniffs for Older Edge or IE,
+   * more info here:
+   * https://stackoverflow.com/q/31721250/3528132
+   */
+  function isOlderEdgeOrIE() {
+    return (
+      window.navigator.userAgent.indexOf("MSIE ") > -1 ||
+      !!navigator.userAgent.match(/Trident.*rv\:11\./) ||
+      window.navigator.userAgent.indexOf("Edge") > -1
+    );
+  }
+  
+  function valueTotalRatio(value, min, max) {
+    return ((value - min) / (max - min)).toFixed(2);
+  }
+  
+  function getLinearGradientCSS(ratio, leftColor, rightColor) {
+    return [
+      '-webkit-gradient(',
+      'linear, ',
+      'left top, ',
+      'right top, ',
+      'color-stop(' + ratio + ', ' + leftColor + '), ',
+      'color-stop(' + ratio + ', ' + rightColor + ')',
+      ')'
+    ].join('');
+  }
+  
+  function updateRangeEl(rangeEl) {
+    var ratio = valueTotalRatio(rangeEl.value, rangeEl.min, rangeEl.max);
+  
+    rangeEl.style.backgroundImage = getLinearGradientCSS(ratio, '#D8D8D8', '#c5c5c5');
+  }
+  
+  function initRangeEl() {
+    var rangeEl = document.querySelector('input[type=range]');
+    var textEl = document.querySelector('input[type=text]');
+  
+    if (isOlderEdgeOrIE()) {
+      rangeEl.style.height = "20px";
+      // IE 11/10 fires change instead of input
+      // https://stackoverflow.com/a/50887531/3528132
+      rangeEl.addEventListener("change", function(e) {
+        textEl.value = e.target.value;
+      });
+      rangeEl.addEventListener("input", function(e) {
+        textEl.value = e.target.value;
+      });
+    } else {
+      updateRangeEl(rangeEl);
+      rangeEl.addEventListener("input", function(e) {
+        updateRangeEl(e.target);
+        textEl.value = e.target.value;
+      });
+    }
+  }
+  
+  initRangeEl();
+  
+  
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  
+</script>

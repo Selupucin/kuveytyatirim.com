@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55.119" height="55.12" viewBox="0 0 55.119 55.12">
+  <g id="profit" transform="translate(-0.004 0)">
+    <g id="Group_2" data-name="Group 2" transform="translate(25.949 19.486)">
+      <g id="Group_1" data-name="Group 1">
+        <path id="Path_29" data-name="Path 29" d="M255.533,181.005a14.534,14.534,0,1,0,14.641,14.533A14.549,14.549,0,0,0,255.533,181.005Zm1.657,22.316c-.014.005-.029,0-.043.008v1.9a1.615,1.615,0,1,1-3.23,0v-1.91a6.641,6.641,0,0,1-2.954-2.08,1.614,1.614,0,0,1,2.473-2.075c.855,1.017,1.821,1.421,2.648,1.124a1.615,1.615,0,0,0-.552-3.133,4.845,4.845,0,0,1-1.888-9.307c.089-.038.183-.036.273-.068V185.85a1.615,1.615,0,1,1,3.23,0v1.932a6.237,6.237,0,0,1,2.38,1.437,1.615,1.615,0,1,1-2.249,2.318,2.206,2.206,0,0,0-2.373-.716,1.615,1.615,0,0,0,.628,3.1,4.845,4.845,0,0,1,1.657,9.4Z" transform="translate(-241 -181.005)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_4" data-name="Group 4" transform="translate(0.004 35.634)">
+      <g id="Group_3" data-name="Group 3" transform="translate(0)">
+        <path id="Path_30" data-name="Path 30" d="M1.619,331A1.614,1.614,0,0,0,0,332.618v16.256a1.614,1.614,0,0,0,1.615,1.615H6.463V331Z" transform="translate(-0.004 -331.003)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_6" data-name="Group 6" transform="translate(13.03 -0.001)">
+      <g id="Group_5" data-name="Group 5" transform="translate(0 0)">
+        <path id="Path_31" data-name="Path 31" d="M146.276,10.079,134.972.39a1.608,1.608,0,0,0-2.1,0l-11.3,9.689a1.614,1.614,0,0,0,1.05,2.84h4.844v42.2h11.3a1.614,1.614,0,0,0,1.615-1.615V49.821a17.73,17.73,0,0,1,0-31.6v-5.3h4.844a1.615,1.615,0,0,0,1.05-2.84Z" transform="translate(-121.003 0.001)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_8" data-name="Group 8" transform="translate(9.8 22.715)">
+      <g id="Group_7" data-name="Group 7">
+        <path id="Path_32" data-name="Path 32" d="M92.617,211.005A1.614,1.614,0,0,0,91,212.62v30.789h6.459v-32.4Z" transform="translate(-91.002 -211.005)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
