@@ -69,7 +69,6 @@
 
 <script>
 export default {
-  components: {},
   name: "about",
   bodyClass: "about-page",
   props: {

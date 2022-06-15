@@ -43,13 +43,13 @@ a {
 	width: 20%;
 	background: url(img/logo.svg);
 	background-size: contain;
-	height: 50px;
+	height: 80px;
 	background-repeat: no-repeat;
 }
 
 .top_menu {
 	float: left;
-	padding: 12px 0px;
+	padding: 28px 0px;
 }
 
 .top_menu ul {
@@ -200,7 +200,7 @@ a {
 	text-decoration: none;
 }
 
-.cont_lgn_btn {
+.cont_lgn_btn a {
 	float: left;
 	padding: 6px 30px;
 	margin-top: 10px;
@@ -211,8 +211,10 @@ a {
 	transition: 0.4s;
 }
 
-.cont_lgn_btn:hover {
+.cont_lgn_btn a:hover {
 	background: #D6A53E;
+	color: white;
+	text-decoration: none;
 }
 
 .home_slider {
@@ -1765,7 +1767,7 @@ tr:nth-child(even) {
 	text-align: center;
 }
 
-.hesap_olustur {
+.hesap_olustur a {
 	background: #EFB741;
 	border-radius: 5px;
 	padding: 7px 15px;
@@ -1776,8 +1778,10 @@ tr:nth-child(even) {
 	transition: 0.4s;
 }
 
-.hesap_olustur:hover {
+.hesap_olustur a:hover {
 	background: #D6A53E;
+	color: white;
+	text-decoration: none;
 }
 
 .bulten_left_bottom a {

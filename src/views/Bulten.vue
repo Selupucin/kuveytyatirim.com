@@ -29,7 +29,7 @@
           >
 
           <a href="#">
-            <div class="hesap_olustur">Hesap Oluştur</div>
+            <div class="hesap_olustur"><a href="/real-account">Hesap Oluştur</a></div>
           </a>
 
           <div class="bulten_left_bottom_is">

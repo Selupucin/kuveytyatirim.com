@@ -9,7 +9,7 @@
               >Open an account now to invest <br />in the world's leading
               brands!</span
             >
-            <div class="cont_lgn_btn">Login</div>
+            <div class="cont_lgn_btn"><a href="/login">Login</a></div>
           </div>
         </div>
         <div class="col-md-6">
@@ -311,7 +311,7 @@
                 sunt in culpa qui officia deserunt mollit anim id
               </span>
 
-              <div class="cont_lgn_btn">Gerçek Hesap Oluştur</div>
+              <div class="cont_lgn_btn"><a href="/real-account">Gerçek Hesap Oluştur</a></div>
             </div>
           </div>
         </div>
