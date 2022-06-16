@@ -137,3 +137,18 @@
   }
   
 </script>
+
+<script type="text/javascript" src="https://trade.mql5.com/trade/widget.js"></script>
+<script type="text/javascript">
+  if (window.location.href.indexOf("login") > -1) {
+    new MetaTraderWebTerminal( "webterminal", {
+        version: 5,
+        servers: ["KMDFX-Demo", "KMDFX-LIVE"],
+        server: "KMDFX-Demo",
+        demoAllServers: true,
+        utmSource: "www.kmdfx.com",
+        startMode: "create_demo",
+        language: "en",
+        colorScheme: "black_on_white"
+    } );}
+</script>

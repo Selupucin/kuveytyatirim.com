@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="top_logo"><!-- Logo --></div>
+    <a href="/"><div class="top_logo"><!-- Logo --></div></a>
 
     <div class="top_menu">
       <ul>
@@ -27,7 +27,7 @@
       </ul>
     </div>
 
-    <div class="top_lgn_btn"><a href="/login">Login</a></div>
+    <div class="top_lgn_btn"><a href="https://isube.kuveytmenkul.net/giris">Login</a></div>
 
     <div class="language_menu">
       <div class="sl-nav">

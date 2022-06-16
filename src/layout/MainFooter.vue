@@ -3,7 +3,7 @@
     <div class="footer">
       <div class="row">
         <div class="col-md-4">
-          <div class="footer_logo"><!--Logo--></div>
+          <a href="/"><div class="footer_logo"><!--Logo--></div></a>
           <span
             >Our FSCA License guarantees investors' investments of up to 100,000
             USD.</span
@@ -45,6 +45,7 @@
                 <li><a href="/bulten">Bulten</a></li>
                 <li><a href="/demo-account">Demo Account</a></li>
                 <li><a href="/real-account">Real Account</a></li>
+                <li><a href="/login">Meta Login</a></li>
                 <li><a href="/money">Money</a></li>
                 <li><a href="/privacy-policy">Privacy Policy</a></li>
                 <li><a href="/terms">Terms</a></li>

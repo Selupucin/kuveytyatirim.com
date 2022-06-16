@@ -24,6 +24,10 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	text-decoration: none !important;
+}
+
 .row {
 	float: left;
 }
@@ -1432,6 +1436,26 @@ input[type="range"]::-moz-range-thumb {
 	background-repeat: no-repeat;
 	top: 20px;
 	left: 13px;
+}
+
+.country::before {
+	content: "";
+	background: url(img/as_yer_icon.svg);
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	background-repeat: no-repeat;
+	top: 20px;
+	left: 13px;
+}
+
+#resMessage {
+	width: 100%;
+    margin-top: 10px;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #EFB741;
 }
 
 .about_section_img {

@@ -15,13 +15,38 @@
           >
 
           <div class="ac_sec_form_item name">
-            <input type="text" name="" placeholder="Name Surname" />
+            <input
+              v-model="name"
+              type="text"
+              name="name"
+              placeholder="Name Surname"
+            />
           </div>
           <div class="ac_sec_form_item phone">
-            <input type="text" name="" placeholder="Phone" />
+            <input
+              v-model="phone"
+              class="form_phone_item"
+              type="text"
+              name="number"
+              id="mobPhone"
+              placeholder="Phone"
+            />
           </div>
           <div class="ac_sec_form_item mail">
-            <input type="text" name="" placeholder="E-mail" />
+            <input
+              v-model="mail"
+              type="mail"
+              name="mail"
+              placeholder="E-mail"
+            />
+          </div>
+          <div class="ac_sec_form_item country">
+            <input
+              v-model="country"
+              type="text"
+              name="country"
+              placeholder="Country"
+            />
           </div>
 
           <span
@@ -29,7 +54,11 @@
             you have read and accepted the confidentiality agreement.</span
           >
 
-          <button class="submit_btn_taa">Open a demo account</button>
+          <span id="resMessage"></span>
+
+          <button @click="onSubmit" class="submit_btn_taa">
+            Open a demo account
+          </button>
         </div>
       </div>
     </div>
@@ -38,9 +67,58 @@
 
 <script>
 export default {
-  components: {},
   name: "demo-account",
   bodyClass: "demo-account-page",
+  methods: {
+    onSubmit() {
+      var GonderData = {
+        name: this.name,
+        mail: this.mail,
+        country: this.country,
+        phone: this.phone,
+        ref: "DemoHesapAc",
+      };
+      var gonder = axios
+        .post("https://kuveyt.fxcrm.me/api/new", GonderData, {
+          headers: {
+            token: "2s98XDwWauJNjpXQRFvPgUwQFQrEEQ",
+          },
+        })
+        .then((response) => {
+          if (response.data.status == false || !response.data.status) {
+            if (response.data.msg) {
+              document.getElementById("resMessage").innerText =
+                response.data.msg;
+            } else {
+              document.getElementById("resMessage").innerText = alert(
+                "İşlemde bir hata oluştu, tekrar yönlendirileceksiniz."
+              );
+              setTimeout(() => {
+                location.reload();
+              }, 1500);
+            }
+          } else {
+            document.getElementById("resMessage").innerText =
+              "Kaydınız alındı.";
+            setTimeout(() => {
+              location.href("/login");
+            }, 1500);
+          }
+        })
+        .catch((error) => {
+          this.errorMessage = error.message;
+          console.error("There was an error!", error);
+        });
+    },
+  },
+  data() {
+    return {
+      name: "",
+      mail: "",
+      country: "",
+      phone: "",
+    };
+  },
   props: {
     aboutRight: {
       type: String,
